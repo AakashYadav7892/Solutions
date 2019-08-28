@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p1="http://ega.rak.ae/xi/DCA/RevenuePostings" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="SI_DCA_OB" targetNamespace="http://ega.rak.ae/xi/DCA/RevenuePostings" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_DCA_OB" />
+  <wsdl:types>
+    <xsd:schema xmlns="http://ega.rak.ae/xi/DCA/RevenuePostings" targetNamespace="http://ega.rak.ae/xi/DCA/RevenuePostings" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="MT_DCA_RECEIVER" type="p1:DT_DCA_RECEIVER" />
+      <xsd:element name="MT_DCA_SENDER" type="p1:DT_DCA_SENDER" />
+      <xsd:complexType name="DT_DCA_RECEIVER">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="EN">Data type for DCA Receiver</xsd:documentation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">b0a7799ba22611e9ad070000152572c6</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="REFNUM" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DT_DCA_SENDER">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="EN">Data type for DCA Sender</xsd:documentation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">1f41001fa22611e9a6eb0000152572c6</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="FIFields">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="DocumentDate" type="xsd:string" />
+                <xsd:element minOccurs="0" name="FiscalYear" type="xsd:string" />
+                <xsd:element minOccurs="0" name="Documentheaderreference" type="xsd:string" />
+                <xsd:element minOccurs="0" name="ServiceCode" type="xsd:string" />
+                <xsd:element minOccurs="0" name="ServiceDescription" type="xsd:string" />
+                <xsd:element minOccurs="0" name="CompanyCode" type="xsd:string" />
+                <xsd:element minOccurs="0" name="Currency" type="xsd:string" />
+                <xsd:element minOccurs="0" name="GLNumber" type="xsd:string" />
+                <xsd:element minOccurs="0" name="GrossAmount" type="xsd:string" />
+                <xsd:element minOccurs="0" name="NetAmount" type="xsd:string" />
+                <xsd:element minOccurs="0" name="TaxAmount" type="xsd:string" />
+                <xsd:element minOccurs="0" name="TaxCode" type="xsd:string" />
+                <xsd:element minOccurs="0" name="TaxPercentage" type="xsd:string" />
+                <xsd:element minOccurs="0" name="AssignmentField" type="xsd:string" />
+                <xsd:element minOccurs="0" name="LineItemText" type="xsd:string" />
+                <xsd:element minOccurs="0" name="UniqueNumbergeneratedfromSharepointsystem" type="xsd:string" />
+                <xsd:element minOccurs="0" name="CreatedDate" type="xsd:string" />
+                <xsd:element minOccurs="0" name="CreatedTime" type="xsd:string" />
+                <xsd:element minOccurs="0" name="CreatedByUserId" type="xsd:string" />
+                <xsd:element minOccurs="0" name="CustomField1" type="xsd:string" />
+                <xsd:element minOccurs="0" name="CustomField2" type="xsd:string" />
+                <xsd:element minOccurs="0" name="CustomField3" type="xsd:string" />
+                <xsd:element minOccurs="0" name="CustomField4" type="xsd:string" />
+                <xsd:element minOccurs="0" name="CustomField5" type="xsd:string" />
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="MT_DCA_SENDER">
+    <wsdl:documentation />
+    <wsdl:part name="MT_DCA_SENDER" element="p1:MT_DCA_SENDER" />
+  </wsdl:message>
+  <wsdl:message name="MT_DCA_RECEIVER">
+    <wsdl:documentation />
+    <wsdl:part name="MT_DCA_RECEIVER" element="p1:MT_DCA_RECEIVER" />
+  </wsdl:message>
+  <wsdl:portType name="SI_DCA_OB">
+    <wsdl:documentation />
+    <wsdl:operation name="SI_DCA_OB">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_DCA_OB" />
+      </wsp:Policy>
+      <wsdl:input message="p1:MT_DCA_SENDER" />
+      <wsdl:output message="p1:MT_DCA_RECEIVER" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_DCA_OBBinding" type="p1:SI_DCA_OB">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SI_DCA_OB">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_DCA_OBService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_DCA_OBBinding">
+      <address location="http://egax10ci.ega.lan:53500/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_DCA&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DCA_OB&amp;interfaceNamespace=http%3A%2F%2Fega.rak.ae%2Fxi%2FDCA%2FRevenuePostings" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_DCA_OBBinding">
+      <address location="https://egax10ci.ega.lan:44335/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_DCA&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DCA_OB&amp;interfaceNamespace=http%3A%2F%2Fega.rak.ae%2Fxi%2FDCA%2FRevenuePostings" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,8 @@
+D:\WORK\SHAREPOINT\PushDataToRAKDCAService\PushDataToRAKDCAService\bin\Debug\PushDataToRAKDCAService.exe.config
+D:\WORK\SHAREPOINT\PushDataToRAKDCAService\PushDataToRAKDCAService\bin\Debug\PushDataToRAKDCAService.exe
+D:\WORK\SHAREPOINT\PushDataToRAKDCAService\PushDataToRAKDCAService\bin\Debug\PushDataToRAKDCAService.pdb
+D:\WORK\SHAREPOINT\PushDataToRAKDCAService\PushDataToRAKDCAService\obj\Debug\PushDataToRAKDCAService.csprojAssemblyReference.cache
+D:\WORK\SHAREPOINT\PushDataToRAKDCAService\PushDataToRAKDCAService\obj\Debug\PushDataToRAKDCAService.csproj.CoreCompileInputs.cache
+D:\WORK\SHAREPOINT\PushDataToRAKDCAService\PushDataToRAKDCAService\obj\Debug\PushDataToRAKDCAService.csproj.CopyComplete
+D:\WORK\SHAREPOINT\PushDataToRAKDCAService\PushDataToRAKDCAService\obj\Debug\PushDataToRAKDCAService.exe
+D:\WORK\SHAREPOINT\PushDataToRAKDCAService\PushDataToRAKDCAService\obj\Debug\PushDataToRAKDCAService.pdb
